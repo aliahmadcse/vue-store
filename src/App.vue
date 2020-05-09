@@ -2,7 +2,13 @@
     <div id="app" class="container mt-5">
         <h1>My Shop</h1>
 
-        <navbar :cart="cart" :cartQty="cartQty" :cartTotal="cartTotal" @toggle="toggleSliderStatus"></navbar>
+        <navbar
+            :cart="cart"
+            :cartQty="cartQty"
+            :cartTotal="cartTotal"
+            @toggle="toggleSliderStatus"
+            @delete="deleteItem"
+        ></navbar>
 
         <price-slider :sliderStatus="sliderStatus" :maximum.sync="maximum"></price-slider>
 
@@ -65,8 +71,38 @@ export default {
                 this.cart.push({ product: product, qty: 1 });
             }
         },
+
+        /**
+         * Delete an item in the cart, If more than one same item,
+         * it decrements the quantity
+         */
+        deleteItem: function(id) {
+            if (this.cart[id].qty > 1) {
+                this.cart[id].qty--;
+            } else {
+                this.cart.splice(id, 1);
+            }
+        },
+
         toggleSliderStatus: function() {
             this.sliderStatus = !this.sliderStatus;
+        }
+    },
+
+    computed: {
+        cartTotal: function() {
+            let sum = 0;
+            for (let key in this.cart) {
+                sum = sum + this.cart[key].product.price * this.cart[key].qty;
+            }
+            return sum;
+        },
+        cartQty: function() {
+            let qty = 0;
+            for (let key in this.cart) {
+                qty = qty + this.cart[key].qty;
+            }
+            return qty;
         }
     }
 };

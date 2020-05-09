@@ -12,8 +12,8 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                 >
-                    <span class="badge badge-pill badge-light">{{cartQty}}</span>
-                    <i class="fas fa-shopping-cart mx-2"></i>
+                    <span class="badge badge-pill badge-light mr-3">{{cartQty}}</span>
+                    <font-awesome-icon icon="shopping-cart" class="mr-3"></font-awesome-icon>
                     <price :value="Number(cartTotal)"></price>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdown">
@@ -28,7 +28,7 @@
                             </b>
                             <a
                                 href="#"
-                                @click.stop="deleteItem(index)"
+                                @click.stop="$emit('delete',index)"
                                 class="badge badge-danger text-white"
                             >-</a>
                         </div>
@@ -40,13 +40,13 @@
 </template>
 
 <script>
-// import Price from "./Price";
+import Price from "./Price";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 export default {
     name: "navbar",
     props: ["cart", "cartQty", "cartTotal"],
     components: {
-        // price,
+        Price,
         FontAwesomeIcon
     }
 };
