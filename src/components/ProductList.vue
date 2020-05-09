@@ -9,7 +9,7 @@
         <div v-for="(item, index) in products" :key="item.id" :data-index="index">
             <div class="row d-flex mb-1 align-items-center" v-if="item.price <=Number(maximum)">
                 <div class="col-1 m-auto">
-                    <button class="btn btn-info" @click="$emit('add', item)">+</button>
+                    <button class="btn btn-info" @click="$parent.$emit('add', item)">+</button>
                 </div>
                 <div class="col-4">
                     <img class="img-fluid d-block" :src="item.image" :alt="item.name" />
