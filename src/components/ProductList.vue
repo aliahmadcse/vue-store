@@ -7,7 +7,7 @@
         @leave="leave"
     >
         <div v-for="(item, index) in products" :key="item.id" :data-index="index">
-            <div class="row d-flex mb-3 align-items-center" v-if="item.price <=Number(maximum)">
+            <div class="row d-flex mb-1 align-items-center" v-if="item.price <=Number(maximum)">
                 <div class="col-1 m-auto">
                     <button class="btn btn-info" @click="$emit('add', item)">+</button>
                 </div>
@@ -49,7 +49,7 @@ export default {
             var delay = el.dataset.index * 100;
             setTimeout(function() {
                 el.className =
-                    "row d-flex mb-3 align-items-center animated fadeInRight";
+                    "row d-flex mb-2 align-items-center animate__animated animate__fadeInRight";
             }, delay);
         },
 
@@ -57,7 +57,7 @@ export default {
             var delay = el.dataset.index * 100;
             setTimeout(function() {
                 el.className =
-                    "row d-flex mb-3 align-items-center animated fadeOutRight";
+                    "row d-flex mb-2 align-items-center animate__animated animate__fadeOutRight";
             }, delay);
         }
     }
