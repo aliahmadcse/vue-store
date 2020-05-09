@@ -1,6 +1,11 @@
 <template>
     <div id="app" class="container mt-5">
         <h1>My Shop</h1>
+
+        <navbar :cart="cart" :cartQty="cartQty" :cartTotal="cartTotal" @toggle="toggleSliderStatus"></navbar>
+
+        <price-slider :sliderStatus="sliderStatus" :maximum.sync="maximum"></price-slider>
+
         <product-list :maximum="maximum" :products="products" @add="addItem"></product-list>
     </div>
 </template>
@@ -8,18 +13,23 @@
 <script>
 // import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import ProductList from "./components/ProductList.vue";
+import PriceSlider from "./components/PriceSlider.vue";
+import Navbar from "./components/Navbar";
 
 export default {
     name: "App",
     components: {
         // FontAwesomeIcon,
-        ProductList
+        ProductList,
+        PriceSlider,
+        Navbar
     },
     data: function() {
         return {
             maximum: 99,
             cart: [],
-            products: null
+            products: null,
+            sliderStatus: true
         };
     },
     mounted: function() {
@@ -54,6 +64,9 @@ export default {
             } else {
                 this.cart.push({ product: product, qty: 1 });
             }
+        },
+        toggleSliderStatus: function() {
+            this.sliderStatus = !this.sliderStatus;
         }
     }
 };
