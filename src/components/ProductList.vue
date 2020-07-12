@@ -16,7 +16,7 @@
                 </div>
                 <div class="col">
                     <h3 class="text-info">{{ item.name }}</h3>
-                    <!-- <p class="mb-0">{{ item.description }}</p> -->
+                    <p class="mb-0">{{ item.description }}</p>
                     <div class="h5 float-right">
                         <price :value="Number(item.price)"></price>
                     </div>

@@ -29,6 +29,9 @@ export default {
                     imgUrl:
                         "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
                     name: "CHECK PRINT SHIRT",
+                    description:
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid tempore dicta voluptate expedita, dolores reiciendis sed aliquam dolorum recusandae sit aperiam repellat quisquam officiis architecto laboriosam vitae, alias accusamus incidunt?",
+
                     price: 110
                 },
                 {
@@ -36,6 +39,8 @@ export default {
                     imgUrl:
                         "https://guesseu.scene7.com/is/image/GuessEU/FLGLO4FAL12-BEIBR?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
                     name: "GLORIA HIGH LOGO SNEAKER",
+                    description:
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid tempore dicta voluptate expedita, dolores reiciendis sed aliquam dolorum recusandae sit aperiam repellat quisquam officiis architecto laboriosam vitae, alias accusamus incidunt?",
                     price: 91
                 },
                 {
@@ -43,6 +48,8 @@ export default {
                     imgUrl:
                         "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
                     name: "CATE RIGID BAG",
+                    description:
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid tempore dicta voluptate expedita, dolores reiciendis sed aliquam dolorum recusandae sit aperiam repellat quisquam officiis architecto laboriosam vitae, alias accusamus incidunt?",
                     price: 94.5
                 },
                 {
@@ -50,6 +57,8 @@ export default {
                     imgUrl:
                         "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
                     name: "GUESS CONNECT WATCH",
+                    description:
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid tempore dicta voluptate expedita, dolores reiciendis sed aliquam dolorum recusandae sit aperiam repellat quisquam officiis architecto laboriosam vitae, alias accusamus incidunt?",
                     price: 180.9
                 },
                 {
@@ -57,6 +66,8 @@ export default {
                     imgUrl:
                         "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
                     name: "'70s RETRO GLAM KEFIAH",
+                    description:
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid tempore dicta voluptate expedita, dolores reiciendis sed aliquam dolorum recusandae sit aperiam repellat quisquam officiis architecto laboriosam vitae, alias accusamus incidunt?",
                     price: 20
                 }
             ]
