@@ -12,11 +12,11 @@
                     <button class="btn btn-info" @click="$parent.$emit('add', item)">+</button>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid d-block" :src="item.image" :alt="item.name" />
+                    <img class="img-fluid d-block" :src="item.imgUrl" :alt="item.name" />
                 </div>
                 <div class="col">
                     <h3 class="text-info">{{ item.name }}</h3>
-                    <p class="mb-0">{{ item.description }}</p>
+                    <!-- <p class="mb-0">{{ item.description }}</p> -->
                     <div class="h5 float-right">
                         <price :value="Number(item.price)"></price>
                     </div>
